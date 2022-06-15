@@ -1,0 +1,13 @@
+/*INDEX.HTML*/
+.contenedorIndex{
+    margin:auto;
+    width: 95%;
+    height:auto;
+    /* max-width:1400px; */
+    display: grid;
+    grid-template-rows:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr) ;
+    grid-template-areas:"header header header"
+                        "main    main  main";
+
+  }

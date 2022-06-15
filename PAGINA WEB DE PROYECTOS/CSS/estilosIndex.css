@@ -1,0 +1,509 @@
+/*RESET CSS*/
+*{
+   margin:0;
+   padding:0;
+   font-size:100%;
+   font-weight:normal;
+   box-sizing:border-box;
+
+}
+a{
+    text-decoration:none;
+    color:black;
+
+}
+img,fieldset{
+    border:0;
+}
+td,th,tr,caption{
+    text-align:left;
+    font-weight:normal;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+ol{
+padding-left:1.4em;
+list-style:decimal;
+}
+ul{
+padding-left:1.4em;
+list-style:square;
+}
+q:after,q:before{
+    content:'';
+}
+/*ROOT*/
+:root{
+    --fontSizeLogo: 75px;
+    --fontSizeLetraGeneral: 20px;
+    --backgroundHeader:  linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+/*Index.html*/
+body{
+    background-color: gainsboro;
+}
+.headerIndex{
+    /* border:solid 3px red; */
+    background:var(--backgroundHeader);   
+    grid-area:header;
+    display: grid;
+    height:730px;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:"  logo            menu"
+                        "presentacion presentacion";
+}
+.headerIndex .logoFlor{
+    animation: animacionFlor 5s infinite alternate  ;
+}
+.headerIndex .letraR{
+    animation: animacionR 6s infinite alternate  ;
+}
+.headerIndex .letraO{
+    animation: animacionO 8s infinite alternate  ;
+}
+.headerIndex .letraN{
+    animation: animacionN 10s infinite alternate  ;
+}
+.headerIndex .letraA{
+    animation: animacionA 12s infinite alternate  ;
+}
+.headerIndex .letraL{
+    animation: animacionL 14s infinite alternate  ;
+}
+.headerIndex .letraD{
+    animation: animacionD 16s infinite alternate  ;
+}
+.headerIndex .letraCP{
+    animation: animacionCP 18s infinite alternate  ;
+}
+
+
+
+.headerIndex .logo{
+    font-size: var(--fontSizeLogo);
+    grid-area: logo;
+    color:white;
+    text-shadow: 2px 2px red;
+     display: grid;
+   align-items: center;
+   margin-left: 15px;
+    height: 120px;
+
+}
+.headerIndex .menu{
+    grid-area: menu;
+    font-size: var(--fontSizeLetraGeneral);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,1fr);
+    justify-items:end;
+    align-items: center;
+    height: 120px;
+}
+
+
+
+.headerIndex .menu a{
+    padding:10px;
+    border-bottom: 2px solid navy;
+    font-size: var(--fontSizeLetraGeneral);
+    font-weight: bold;
+    color:white;
+
+
+}
+
+.headerIndex .menu a:hover{
+    border-bottom: 3px solid yellow;
+    font-size: 22px;
+    font-weight: bold;
+    color:azure;
+    text-shadow: 0px 0px 15px greenyellow;
+
+}
+
+/*PRESENTACION*/
+
+.headerIndex .presentacion{
+    grid-area: presentacion;
+    font-size: var(--fontSizeLetraGeneral);
+    /* border:solid 3px greenyellow; */
+    height: 610px;  
+
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(1,1fr);
+
+}
+
+
+
+
+.imagenes2Presentacion{
+ width:100%;
+ height: 600px;
+background: url("../Archivos/imagenes/presentacion1.png") no-repeat center ;
+    background-size: contain;
+animation: animacionIMGP 2s infinite alternate;
+
+}
+.imagenes2Presentacion:hover{
+animation: animacionIMGPMovimiento 1s infinite alternate;
+cursor: pointer;
+}
+
+/*ANIMACION DE IMAGEN PRESENTACION*/
+@keyframes animacionIMGP{
+    from{
+        transform: rotateY(10deg);
+
+    }
+    to{
+transform: rotateY(20deg);
+
+    }
+}
+
+@keyframes animacionIMGPMovimiento{
+    from{
+        transform: rotateZ(4deg);
+
+    }
+    to{
+transform: rotateZ(-5deg);
+
+    }
+}
+
+
+.contenido1Presentacion{
+display: grid;
+align-items: center;
+justify-items: center;
+
+}
+
+.h1Clase{
+   
+    font-size:30px;
+
+text-align:center;
+padding:20px;
+color:red;
+font-weight:bold;
+text-shadow:0px 0px 10px seashell;
+
+}
+.pClase{
+   margin-top: -90px;
+/* border:solid 3px red; */
+height: 250px;
+line-height: 35px;
+width:50%;
+text-align:justify;
+color:bisque;
+
+}
+
+
+
+/*ANIMACIONES PARA HEADER*/
+@keyframes animacionFlor{
+    from{
+        color:white;
+        text-shadow: 2px 2px red;
+        transform: rotateY(0deg);    
+        
+    }
+    to{
+    color:darkgoldenrod;
+    text-shadow: 2px 2px blue;
+    transform: rotateY(360deg);
+    }
+    
+    }
+
+@keyframes animacionR{
+from{
+    color:white;
+    text-shadow: 2px 2px red;
+}
+to{
+color:aqua;
+text-shadow: 2px 2px forestgreen;
+
+}
+
+}
+
+@keyframes animacionO{
+    from{
+        color:white;
+        text-shadow: 2px 2px red;
+    }
+    to{
+    color:yellow;
+    text-shadow: 2px 2px fuchsia;
+    
+    }
+    
+    }
+@keyframes animacionN{
+        from{
+            color:white;
+            text-shadow: 2px 2px red;
+        }
+        to{
+        color:cadetblue;
+        text-shadow: 2px 2px lightpink;
+        
+        }
+        
+        }
+@keyframes animacionA{
+            from{
+                color:white;
+                text-shadow: 2px 2px red;
+            }
+            to{
+            color:chartreuse;
+            text-shadow: 2px 2px khaki;
+            
+            }
+            
+            }
+@keyframes animacionL{
+                from{
+                    color:white;
+                    text-shadow: 2px 2px red;
+                }
+                to{
+                color:steelblue;
+                text-shadow: 2px 2px turquoise;
+                
+                }
+                
+                }
+@keyframes animacionD{
+                    from{
+                        color:white;
+                        text-shadow: 2px 2px red;
+                    }
+                    to{
+                    color:cornflowerblue;
+                    text-shadow: 2px 2px darkorange;
+                    
+                    }
+                    
+                    }
+@keyframes animacionCP{
+                        from{
+                            color:white;
+                            text-shadow: 2px 2px red;
+                        }
+                        to{
+                        color:brown;
+                        text-shadow: 2px 2px powderblue;
+                        
+                        }
+                        
+                        }
+                    
+@keyframes animacionParrafo{
+    from{
+
+    }
+    to{
+
+
+    }
+}
+/************************************/
+.cargaPantalla{
+    /* border:3px solid red; */
+    position:absolute ;
+    width:100%;
+    height:900px;
+    background-color: #537895;
+    background: url("../Archivos/imagenes/gifCarga.gif") no-repeat center;
+    background-size: cover;
+
+}
+.cargaPantalla h1{
+    font-size: 120px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-weight: bold;
+    color:blue;
+    text-shadow: 2px 2px red;
+    text-align: center;
+    padding-top: 340px;
+    animation: animacionPantallaCarga 1s infinite alternate;
+    /* border: solid 2px red; */
+}
+.pararScroll{
+    height:100%;
+    overflow: hidden;
+}
+
+
+
+/*ANIMACIONES PARA PANTALLA DE CARGA*/
+
+@keyframes animacionPantallaCarga{
+
+from{
+
+transform: rotateY(-35deg);
+text-shadow: 0px 0px 25px greenyellow;
+
+}
+to{
+    
+    /* transform: rotateZ(380deg); */
+    transform: rotateY(35deg);
+    
+    text-shadow: 0px 0px 25px  yellow;
+
+}
+
+}
+
+@keyframes animacionPantallaDesaparecer{
+0%{
+opacity: 1;
+}
+10%{
+    opacity: .9;
+    }
+    20%{
+        opacity: .8;
+        }30%{
+            opacity: .7;
+            }40%{
+                opacity: .6;
+                }50%{
+                    opacity: .5;
+                    }60%{
+                        opacity: .4;
+                        }70%{
+                            opacity: .3;
+                            }80%{
+                                opacity: .2;
+                                }
+
+100%{
+opacity: .1;
+}
+
+}
+/*************************************************************/
+
+.estiloBotonContacto{
+
+padding:10px;
+background-color: aqua;
+border-radius: 50%;
+cursor: pointer;
+margin-top: -120px;
+}
+
+.estiloBotonContacto:hover{
+    background-color:wheat;
+    color:#09203f;
+    animation:animacionBotonContacto 2s infinite alternate ;
+}
+
+
+@keyframes animacionBotonContacto{
+    from{
+        border:1px dotted red;
+    }
+    to{
+border: 1px dashed greenyellow;
+background-color: cadetblue;
+    }
+}
+
+/******************************************************************************/
+/*   MAIN INDEX   */
+
+/*   SECT  1   */
+
+.mainIndex{
+grid-area: main;
+ width:100%;
+ height:1000px;
+
+
+
+}
+
+.sect1{
+    margin-top: -280px;
+    width: 100%;
+    height: 900px;
+    background: url("../Archivos/imagenes/fondoPSect1.jpg")  no-repeat  center;
+background-size: cover;
+    background-attachment: fixed;
+    padding-top: calc(50vh - 50px );
+    
+
+
+}
+
+.estiloBienvenida{
+    border:solid 3px greenyellow;
+    background-color: black;
+    color:white;
+    font-size: var(--fontSizeLogo);
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    width: 50%;
+    text-align:center;
+    animation: animacionSect1 5s alternate-reverse infinite  ;
+
+
+
+
+}
+
+@keyframes animacionSect1{
+    to{
+        font-size: 15px;
+        width: 10%;
+        border: dotted 4px blue;
+
+    }
+    from{
+        font-size: var(--fontSizeLogo);
+        width: 50%;
+        transform: rotateX(360deg);
+        border: dashed
+         8px greenyellow;
+
+    }
+}
+
+.ola1{
+    margin-top: -100px;
+    width: 100%;
+    fill:skyblue
+}
+.ola2{
+    fill: skyblue;
+    width: 100%;
+
+}
+.sect2{
+    margin-top: -20px;
+    width: 100%;
+    height: 800px;
+   background-color:skyblue;
+
+
+
+}
